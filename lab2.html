@@ -10,6 +10,7 @@
 			#main{
 				width: 80%;
 				display: inline-block;
+				min-height: 600px;
 			}
 			header{
 				width: 100%;
@@ -22,7 +23,12 @@
 				height:50px;
 				background-color: #EA4335;	
 			}
-			h1{
+			footer{
+				width: 100%;
+				height:50px;
+				background-color: #5F5F5F;
+			}
+			h1,.copyright{
 				display: flex;
 				 align-items: center;
 				 justify-content: center;
@@ -42,16 +48,15 @@
 				background-size: cover;
 			}
 			
-			#text-box{
+			#flex-container{
 				width: 80%;
 				height: 300px;
 				margin: 100px 10%;
 				border: 4px #000000 solid;
-			}
-			.flex-box{
 				display: flex;
 			}
-			#text{
+			
+			#flex-item{
 				 width: 100%;
 				 color: #FFFFFF;
 				 text-align: center;
@@ -63,6 +68,9 @@
 		  <header>
 		    <h1>Lab 2</h1>
 		  </header>
+		  <nav>
+		  	
+		  </nav>
 		  <section class="sidebar">
 		    <!-- sidebar content goes in here -->
 		  </section>
@@ -70,8 +78,8 @@
 		  <section id="main">
 		  <div id="main1">
 		  
-	  		<div id="text-box" class="flex-box">
-   				<h1 id="text">Eat to live or Live to eat</h1>
+	  		<div id="flex-container">
+   				<h1 id="flex-item">Eat to live or Live to eat</h1>
    			</div>
 	  
 		  </div>
@@ -82,7 +90,8 @@
 		  
 		  <footer>
 		    <!-- footer content goes in here -->
-		  </footer>
+		   <p class="copyright">Copyright &copy; 2016 </p>
+		   </footer>
 		  <script type="text/javascript"></script>
 	</body>
 
