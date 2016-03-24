@@ -4,12 +4,10 @@
 		<title></title>
 		<link id="link" rel="stylesheet" href="">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
-		<script>
-			$(function(){
-				changeStyle = function (styleName){
-					$('#link').attr("href", styleName+".css");
-				};
-			});
+		<script >
+			function changeStyle(styleName){
+				document.getElementById("link").setAttribute("href", styleName+".css");
+			}
 		</script>
 	</head>
 	<body>
