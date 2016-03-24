@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link id="link" rel="stylesheet" href="">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
+		<script>
+			$(function(){
+				changeStyle = function (styleName){
+					$('#link').attr("href", styleName+".css");
+				};
+			});
+		</script>
+	</head>
+	<body>
+
+		  <header>
+		    <h1>Lab 5</h1>
+		  </header>
+		  <nav></nav>
+		  <section class="sidebar">
+		    <!-- sidebar content goes in here -->
+		  </section>
+
+		  <section id="main">
+			 <div id="container1">
+		  		<h1 id="text">Select which style?</h1>
+		  		<ul>
+		  			<li><a class="link" onclick="changeStyle('css/lab5-styles-1');" href="#">Style sheet #1</a></li>
+		  			<li><a class="link" onclick="changeStyle('css/lab5-styles-2');" href="#">Style sheet #2</a></li>
+		  			<li><a class="link" onclick="changeStyle('');" href="#">No style sheet</a></li>
+		  		</ul>
+		  		<div id="container2">
+		  		<p id="para">
+		  			Do you like travel? There are so many places that we should see before we die. We can visit the 7 <b>Wonder of the World</b> and/or the different <i>big cites in the world.</i> Each place can be a rewarding experience.
+		  		</p>
+		  		</div>
+   			</div>
+		  </section>
+		  <section class="sidebar">
+		    <!-- sidebar content goes in here -->
+		  </section>
+		  
+		  <footer>
+		    <!-- footer content goes in here -->
+		   <p class="copyright">Copyright &copy; 2016 </p>
+		   </footer>
+		 
+	</body>
+
+
+</html>
