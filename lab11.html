@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			.sidebar{
+				width: 10%;
+				display: inline-block;
+			}
+			#main{
+				width: 80%;
+				display: inline-block;
+				min-height: 600px;
+			}
+			nav{
+				width: 80%;
+				margin: 0 10%;
+				height:50px;
+				background-color: #EA4335;	
+			}
+			footer{
+				width: 100%;
+				height:50px;
+				background-color: #5F5F5F;
+			}
+			h1,.copyright,#container2{
+				 display: flex;
+				 align-items: center;
+				 justify-content: center;
+				 color: #FFFFFF;
+			}
+			header{
+				width: 100%;
+				height:50px;
+				background-color: #4285F4;
+				color:#FFFFFF;
+			}
+			#container1{
+				width: 100%;
+				min-height: 500px;
+				border: 1px solid rgba(0, 0, 0, 0);
+			}
+			
+			#container2{
+				width: 80%;
+				min-height: 300px;
+				margin: 50px 10%;
+				border: 3px red solid;
+				box-shadow: 2px 2px 2px 2px #888888;
+				border-radius: 15px;
+				background-color: #403C3B;
+
+			}
+			#text1{
+				 display: block;
+				 width: 100%;
+				 
+			}
+			#heading, label{
+				color:#FFFFFF;
+			}
+			span{
+				color:red;
+				display: inline;
+				align-items: center;
+			}
+			#textarea-1{
+				width: 100%;
+				min-height: 100px;
+				border-radius: 5px;
+				background-color: #999999;
+				color:#FFFFFF;
+				font-size: 20px;
+				font-weight: 800;
+			}
+			#container3{
+				width: 60%;
+			}
+		</style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
+		<script>
+			$(document).ready(function() {
+				$( "#textarea-1" ).keypress(function(event) {
+					var taLength = $( "#textarea-1" ).val().length;
+					taLength = taLength + 1;
+					if(taLength < 140){
+						$('#num').text(140 - taLength);
+						$('#ASCIInum').text(event.keyCode);
+					}
+					else{
+						$('#num').text(0);
+						$('#msg').text('Stop now');
+					}
+				});
+				
+			});
+
+		</script>
+	</head>
+	<body>
+
+		  <header>
+		    <h1>Lab 10</h1>
+		  </header>
+		  <nav>
+		  	
+		  </nav>
+		  <section class="sidebar">
+		    <!-- sidebar content goes in here -->
+		  </section>
+
+		  <section id="main">
+			  <div id="container1">
+				<div id="container2">
+					<div id="container3">
+					<h1 id="heading">MY MESSAGE</h1>
+					<form id="form1">
+						<textarea type="text" id="textarea-1"></textarea>
+					</form>
+					<span id="num">140</span><span> characters. </span><span id="msg"></span>
+					<br/>
+					<span >Last key in ASCII code: </span><span id="ASCIInum"></span>
+					</div>
+					
+			  	</div>
+			  </div>
+
+		  </section>
+		  <section class="sidebar">
+		    <!-- sidebar content goes in here -->
+		  </section>
+		  
+		  <footer>
+		    <!-- footer content goes in here -->
+		   <p class="copyright">Copyright &copy; 2016 </p>
+		   </footer>
+		  <script type="text/javascript"></script>
+	</body>
+
+
+</html>
