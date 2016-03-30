@@ -76,11 +76,17 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
 		<script>
 			$(document).ready(function() {
-				$( "#text-area-1" ).keydown(function(event) {
+				$( "body" ).keydown(function(event) {
 					if(event.keyCode == 13){
-						alert(" Enter is pressed.");
+						if(event.target.id == 'text-area-1' ){
+							alert("Enter is pressed in textarea.");
+						}
+						else{
+							alert("Enter is pressed somewhere.");
+						}
 					}
 				});
+
 				
 			});
 
