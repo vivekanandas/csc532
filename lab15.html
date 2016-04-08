@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			.sidebar{
+				width: 10%;
+				display: inline-block;
+			}
+			#main{
+				width: 80%;
+				display: inline-block;
+				min-height: 600px;
+			}
+			header{
+				width: 100%;
+				height:50px;
+				background-color: #4285F4;
+			}
+			nav{
+				width: 80%;
+				margin: 0 10%;
+				height:50px;
+				background-color: #EA4335;	
+			}
+			footer{
+				width: 100%;
+				height:50px;
+				background-color: #5F5F5F;
+			}
+			h1,.copyright{
+				display: flex;
+				 align-items: center;
+				 justify-content: center;
+				 color: #FFFFFF;
+			}
+			
+			#container1{
+				width: 100%;
+				min-height: 500px;
+				border: 1px solid rgba(0, 0, 0, 0);
+				background-image: url("img/thanjavur.jpg");
+				background-size: cover;
+			}
+			
+			#container2{
+				width: 41%;
+				height: 150px;
+				margin: 20% 30%;
+				overflow: hidden;
+
+			}
+			
+			#flex-container{
+				width: 90%;
+				 margin: 0 5%;
+			}
+			#text1{
+				 display: block;
+				 width: 100%;
+				 
+			}
+			#list2
+			{
+			    display: block;
+			    list-style-type: circle;
+			}
+			#list2 li{
+				padding:5px;
+			}
+			#list2 li:first-child{
+				font-size: 20px;
+				color: blue;
+				background-color: #90EE90;
+			}
+			#list2 li:last-child{
+				font-size: 20px;
+				color: blue;
+				background-color: #ADD8E6
+			}
+			#list1{
+				list-style-type: circle;
+			}
+			.span-container,span{
+				font-size: 25px;
+				color:#FFFFFF;
+				margin: 10px 0 0 10px;
+			}
+			.slide{
+				display: inline-block;
+				width: 150px;
+				height: 150px;
+			}
+			.img-box{
+				width: 775px;
+				height: 150px;
+				/*animation: scroll-up 7s infinite;
+				animation-direction: alternate;*/
+			}
+			@keyframes scroll-up {
+				0%{ 
+					transform: translateX(100%); 		
+				}
+				100%{ 
+					transform: translateX(-100%); 
+				}
+			}
+		</style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
+		
+	</head>
+	<body>
+
+		  <header>
+		    <h1>Lab 15</h1>
+		  </header>
+		  <nav>
+		  	
+		  </nav>
+		  <section class="sidebar">
+		    <!-- sidebar content goes in here -->
+		  </section>
+
+		  <section id="main">
+			  <div id="container1">
+				<div id="container2">
+					<div class="img-box" id="img-box">
+						<img src="img/t1.jpg" alt="" class="slide" id="slide1">
+						<img src="img/t2.jpg" alt="" class="slide" id="slide2">
+						<img src="img/t3.jpg" alt="" class="slide" id="slide3">
+						<img src="img/t4.jpg" alt="" class="slide" id="slide4">
+						<img src="img/t5.jpg" alt="" class="slide" id="slide5">
+					</div>
+				</div>
+			  </div>
+			</section>
+		  <section class="sidebar">
+		    <!-- sidebar content goes in here -->
+		  </section>
+		  
+		  <footer>
+		    <!-- footer content goes in here -->
+		   <p class="copyright">Copyright &copy; 2016 </p>
+		   </footer>
+		  <script type="text/javascript"></script>
+	</body>
+	<script>
+		$(document).ready(function() {
+			var $wrapper=$('#img-box');
+			console.log($wrapper);
+			$wrapper.css({marginLeft:0});
+			var animator = function(imgblock) {
+			imgblock.animate(
+			{marginLeft:-765}, 10000,
+			function() {
+			imgblock.animate(
+			{marginLeft:465}, 10000);
+			animator($(this));
+			}
+			);
+			}
+			animator($wrapper);
+		});
+
+	</script>
+
+</html>
