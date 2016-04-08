@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			.sidebar{
+				width: 10%;
+				display: inline-block;
+			}
+			#main{
+				width: 80%;
+				display: inline-block;
+				min-height: 600px;
+			}
+			nav{
+				width: 80%;
+				margin: 0 10%;
+				height:50px;
+				background-color: #EA4335;	
+			}
+			footer{
+				width: 100%;
+				height:50px;
+				background-color: #5F5F5F;
+			}
+			h1,.copyright,#container2{
+				 display: flex;
+				 align-items: center;
+				 justify-content: center;
+				 color: #FFFFFF;
+			}
+			header{
+				width: 100%;
+				height:50px;
+				background-color: #4285F4;
+				color:#FFFFFF;
+			}
+			#container1{
+				width: 100%;
+				min-height: 500px;
+				border: 1px solid rgba(0, 0, 0, 0);
+			}
+			
+			#container2{
+				width: 60%;
+				min-height: 300px;
+				margin: 50px 20%;
+				border: 10px #000 solid;
+				box-shadow: 2px 2px 2px 2px #888888;
+				background-color: #403C3B;
+
+			}
+			#text1{
+				 display: block;
+				 width: 100%;
+				 
+			}
+			#heading, label{
+				color:#FFFFFF;
+				font-size: 20px;
+				font-weight: 800;
+			}
+			span{
+				color:#FFFFFF;
+				display: inline;
+				align-items: center;
+			}
+			#textarea-1{
+				width: 100%;
+				min-height: 100px;
+				border-radius: 5px;
+				background-color: #999999;
+				color:#FFFFFF;
+				font-size: 20px;
+				font-weight: 800;
+			}
+			#container3{
+				width: 100%;
+			}
+			#table-1{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			#row-1{
+				text-align: center;
+			}
+			#table-1 td{
+				padding: 10px;
+			}
+		</style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
+		<script>
+			$(document).ready(function() {
+				$( "#table-1 tr:odd").css("background-color", "#258DC8");
+				$( "#table-1 tr:even").css("background-color", "#880120");
+				
+			});
+
+		</script>
+	</head>
+	<body>
+
+		  <header>
+		    <h1>Lab 12</h1>
+		  </header>
+		  <nav>
+		  	
+		  </nav>
+		  <section class="sidebar">
+		    <!-- sidebar content goes in here -->
+		  </section>
+
+		  <section id="main">
+			  <div id="container1">
+				<div id="container2">
+					<div id="container3">
+						<table id="table-1">
+							<tr id="row-1">
+								<td>Product</td>
+								<td>Description</td>
+								<td>Price</td>
+							</tr>
+							<tr>
+								<td>Dicover France</td>
+								<td>The perfect guide to learn about and discover France</td>
+								<td>$11.99</td>
+							</tr>
+							<tr>
+								<td>Dicover England</td>
+								<td>The perfect guide to learn about and discover England</td>
+								<td>$11.99</td>
+							</tr>
+							<tr>
+								<td>Dicover Italy</td>
+								<td>The perfect guide to learn about and discover Italy</td>
+								<td>$11.99</td>
+							</tr>
+							<tr>
+								<td>Dicover the US</td>
+								<td>The perfect guide to learn about and discover the US</td>
+								<td>$11.99</td>
+							</tr>
+						</table>
+					</div>
+					
+			  	</div>
+			  </div>
+
+		  </section>
+		  <section class="sidebar">
+		    <!-- sidebar content goes in here -->
+		  </section>
+		  
+		  <footer>
+		    <!-- footer content goes in here -->
+		   <p class="copyright">Copyright &copy; 2016 </p>
+		   </footer>
+		  <script type="text/javascript"></script>
+	</body>
+
+
+</html>
