@@ -97,10 +97,8 @@
 				var color = '';
 				$('td').hover(function() {
 					color = $(this).closest('tr').css('background-color');
-					console.log(color);
 					$(this).css('background-color','#FBBC05');
 				}, function() {
-					console.log(color);
 					$(this).css('background-color', color);
 				});
 				
