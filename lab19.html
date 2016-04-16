@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lab 19</title>
+		<style>
+			.sidebar{
+				width: 10%;
+				display: inline-block;
+			}
+			#main{
+				width: 80%;
+				display: inline-block;
+				min-height: 600px;
+			}
+			nav{
+				width: 80%;
+				margin: 0 10%;
+				height:50px;
+				background-color: #EA4335;	
+			}
+			footer{
+				width: 100%;
+				height:50px;
+				background-color: #5F5F5F;
+			}
+			h1,.copyright{
+				 display: flex;
+				 align-items: center;
+				 justify-content: center;
+				 color: #FFFFFF;
+			}
+			#form1,span{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			header{
+				width: 100%;
+				height:50px;
+				background-color: #4285F4;
+				color:#FFFFFF;
+			}
+			#container1{
+				width: 100%;
+				min-height: 500px;
+				border: 1px solid rgba(0, 0, 0, 0);
+			}
+			
+			#container2{
+				width: 40%;
+				min-height: 100px;
+				margin: 50px 5%;
+				border: 1px red solid;
+				box-shadow: 2px 2px 2px 2px #888888;
+				border-radius: 15px;
+				padding: 5px;
+				display: inline-block;
+
+			}
+			#container3{
+				width: 20%;
+				display: inline-block;
+				background-color: #888888;
+			}
+
+			#flex-container{
+				width: 90%;
+				 margin: 0 5%;
+			}
+			#text1{
+				 display: block;
+				 width: 100%;
+				 
+			}
+			#heading, label{
+				color:#000000;
+			}
+			span{
+				color:red;
+			}
+			i .quote{
+				font-size: 17px;
+				padding: 10px;
+			}
+		</style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
+		<script>
+			$(document).ready(function() {
+				$('quote').clone().prependTo('#container3 i');
+			});
+
+		</script>
+	</head>
+	<body>
+
+		  <header>
+		    <h1>Lab 19</h1>
+		  </header>
+		  <nav>
+		  	
+		  </nav>
+		  <section class="sidebar">
+		    <!-- sidebar content goes in here -->
+		  </section>
+
+		  <section id="main">
+			  <div id="container1">
+				<div id="container2">
+					<p>
+						<quote class="quote">It is a Law of nature with is that a male child shall have <b>one more side</b> that his father </quote>, so that each generation shall rise (as a rule) one step in the scale of developement and nobility. Thus the son of a Square is a Pentagon; the son of a Pentagon, a Hexagon; and so on.
+					</p>
+					
+			  	</div>
+			  	<div id="container3">
+			  		<p>
+			  			<i></i>
+			  		</p>
+			  	</div>
+			  </div>
+
+		  </section>
+		  <section class="sidebar">
+		    <!-- sidebar content goes in here -->
+		  </section>
+		  
+		  <footer>
+		    <!-- footer content goes in here -->
+		   <p class="copyright">Copyright &copy; 2016 </p>
+		   </footer>
+	</body>
+
+
+</html>
