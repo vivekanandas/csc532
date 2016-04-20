@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<addresses>
+	<address>
+		<id>11101</id>
+		<firstName>John</firstName>
+		<lastName>Doe</lastName>
+		<street>222 Stevens Creek Blvd</street>
+		<city>Cupertino</city>
+		<state>CA</state>
+		<zip>95014</zip>
+	</address>
+	<address>
+		<id>11102</id>
+		<firstName>Jane</firstName>
+		<lastName>Doe</lastName>
+		<street>222 Stevens Creek Blvd</street>
+		<city>San Jose</city>
+		<state>CA</state>
+		<zip>95135</zip>
+	</address>
+	<address>
+		<id>11103</id>
+		<firstName>Henry</firstName>
+		<lastName>Smith</lastName>
+		<street>1234 El Camino Real</street>
+		<city>Sunnyvale</city>
+		<state>CA</state>
+		<zip>94123</zip>
+	</address>
+</addresses>
