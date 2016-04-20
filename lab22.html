@@ -81,6 +81,10 @@
 		</style>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
 		<script>
+			function callback(data, status){
+				$("#msg").text(data);
+			}
+
 			$(document).ready(function() {
 				$('#submit').click(function(event) {
 					var isError = false;
@@ -94,10 +98,8 @@
 						isError = true;
 					}
 					if(!isError){
-						$.get("lab22.php", $("#form").serializeArray( ), function(data){
-							$("#msg").text(data);
-						});
-						 return false;
+						$.ajax({ type: "GET", url: "lab22.php",data: $("#form").serializeArray( ), success: callback });
+						return false;
 					}
 					else{
 						alert(msg.join('\n'));
