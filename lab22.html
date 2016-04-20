@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lab 20</title>
+		<style>
+			.sidebar{
+				width: 10%;
+				display: inline-block;
+			}
+			#main{
+				width: 80%;
+				display: inline-block;
+				min-height: 600px;
+			}
+			nav{
+				width: 80%;
+				margin: 0 10%;
+				height:50px;
+				background-color: #EA4335;	
+			}
+			footer{
+				width: 100%;
+				height:50px;
+				background-color: #5F5F5F;
+			}
+			h1,.copyright{
+				 display: flex;
+				 align-items: center;
+				 justify-content: center;
+				 color: #FFFFFF;
+			}
+			#form1,span{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			header{
+				width: 100%;
+				height:50px;
+				background-color: #4285F4;
+				color:#FFFFFF;
+			}
+			#container1{
+				width: 100%;
+				min-height: 500px;
+				border: 1px solid rgba(0, 0, 0, 0);
+			}
+			
+			#container2{
+				width: 60%;
+				min-height: 100px;
+				margin: 50px 20%;
+				border: 1px red solid;
+				box-shadow: 2px 2px 2px 2px #888888;
+				border-radius: 15px;
+				padding: 5px;
+				display: inline-block;
+
+			}
+			
+			p{
+				font-size: 17px;
+				padding: 5px;
+			}
+			#container3 p{
+				font-style: italic;
+			}
+			#color-list{
+				height: 100px;
+			}
+			#submit{
+				background-color: #34A853;
+				color: #FFFFFF;
+			}
+			button{
+				display: inline-block;
+				width: 150px;
+				height: 40px;
+				border-radius: 10px;
+			}
+		</style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
+		<script>
+			$(document).ready(function() {
+				$('#submit').click(function(event) {
+					var isError = false;
+					var msg = [];
+					if($('#form :input[name="uname"]').val() == '' ){
+						msg.push('Please enter the username');
+						isError = true;
+					}
+					if($('#form :input[name="password"]').val() == '' ){
+						msg.push('Please enter the password');
+						isError = true;
+					}
+					if(!isError){
+						$.get("lab22.php", $("#form").serializeArray( ), function(data){
+							$("#msg").text(data);
+						});
+						 return false;
+					}
+					else{
+						alert(msg.join('\n'));
+					}
+				});
+			});
+
+		</script>
+	</head>
+	<body>
+
+		  <header>
+		    <h1>Lab 22</h1>
+		  </header>
+		  <nav>
+		  	
+		  </nav>
+		  <section class="sidebar">
+		    <!-- sidebar content goes in here -->
+		  </section>
+
+		  <section id="main">
+			  <div id="container1">
+				<div id="container2">
+					<form id="form" >
+					   <table>
+				         <tr>
+				            <td>Enter your Name</td> <td><input name="uname" id="uname" type="text"></td>
+				         </tr>
+				         <tr>
+				            <td>Enter your Password</td>  <td><input name="password" id="value" type="password"/></td>
+				         </tr>
+				         <tr>
+				         	<td><button id="submit">Submit</button></td>
+				         </tr>
+				          <tr>
+				         	<td><p id="msg"></p></td>
+				         </tr>
+				      </table>
+					</form>
+			  	</div>
+			  </div>
+
+		  </section>
+		  <section class="sidebar">
+		    <!-- sidebar content goes in here -->
+		  </section>
+		  
+		  <footer>
+		    <!-- footer content goes in here -->
+		   <p class="copyright">Copyright &copy; 2016 </p>
+		   </footer>
+	</body>
+
+
+</html>
