@@ -99,6 +99,8 @@
 		<script>
 			$(document).ready(function() {
 				$('#btn').click(function(event) {
+					var rowCount = $('#table-1 tr').length;
+					if(rowCount) return;
 					$.ajax({
 						type: "GET", 
 						url: "lab23.xml", 
