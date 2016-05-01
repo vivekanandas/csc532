@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <style>
+			.sidebar{
+				width: 10%;
+				display: inline-block;
+			}
+			#main{
+				width: 80%;
+				display: inline-block;
+				min-height: 600px;
+			}
+			nav{
+				width: 80%;
+				margin: 0 10%;
+				height:50px;
+				background-color: #EA4335;	
+			}
+			footer{
+				width: 100%;
+				height:50px;
+				background-color: #5F5F5F;
+			}
+			h1,.copyright{
+				 display: flex;
+				 align-items: center;
+				 justify-content: center;
+				 color: #FFFFFF;
+			}
+			#form1,span{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			header{
+				width: 100%;
+				height:50px;
+				background-color: #4285F4;
+				color:#FFFFFF;
+			}
+			#container1{
+				width: 100%;
+				min-height: 500px;
+				border: 1px solid rgba(0, 0, 0, 0);
+			}
+			
+			#container2{
+				width: 60%;
+				min-height: 300px;
+				margin: 50px 20%;
+				border: 3px red solid;
+				box-shadow: 2px 2px 2px 2px #888888;
+				border-radius: 15px;
+
+			}
+			
+			#flex-container{
+				width: 90%;
+				 margin: 0 5%;
+			}
+			#text1{
+				 display: block;
+				 width: 100%;
+				 
+			}
+			.heading, label{
+				color:#000000;
+			}
+			.heading{
+				display: inline-block;
+				padding-left: 10px;
+			}
+			span{
+				color:red;
+			}
+			.number{
+				font-size: 20px;
+				font-weight: 500;
+				align-items: center;
+				justify-content: left;
+				padding-left: 10px;
+			}
+			ul li{
+				list-style: none;
+			}
+      #vegetables ul li ,#fruits ul li {
+        list-style: circle;
+        color:#000;
+      }
+      .ui-widget-content{
+        border:none;
+      }
+      .ui-widget-header {
+        background: #F8B74C;
+        border: 1px solid #c49e60;
+
+      }
+		</style>
+		
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<script>
+			$(document).ready(function() {
+  			// activating tabs
+        $( "#tabs" ).tabs();
+        
+        $('#notify').innerHTML = "Just Updated";
+        
+        // Grabbing all the fruits.
+        var numbers = $.makeArray(document.getElementsByClassName("fruit"));
+        var count = 0;
+        $.each(numbers,function( index, value ){
+          if(count < 3)
+            $(this).prepend('+ ');
+          count++;
+        });
+
+        $(".vegetable:eq(1)").css('background-color','#FFA500');
+        $(".vegetable:eq(0)").css('color','#008000');
+        $(".vegetable:eq(2)").css('color','#008000');
+        $(".vegetable:eq(3)").css('color','#008000');
+        $("#vegetables ul").append('<li class="vegetable"><i>red </i>tomatoe</li>');
+      });
+
+		</script>
+	</head>
+	<body>
+
+		  <header>
+		    <h1>Lab 26</h1>
+		  </header>
+		  <nav>
+		  	
+		  </nav>
+		  <section class="sidebar">
+		    <!-- sidebar content goes in here -->
+		  </section>
+
+		  <section id="main">
+			  <div id="container1">
+  				<div id="container2">
+  				  <div id="tabs">
+              <ul>
+                <li><a href="#daily-tasks">Daily tasks</a></li>
+                <li><a href="#fruits">Fruits</a></li>
+                <li><a href="#vegetables">Vegetables</a></li>
+              </ul>
+              <div id="daily-tasks">
+                <ul>
+                  <li>List want to do</li>
+                </ul>
+              </div>
+              <div id="fruits">
+                <p id="notify"></p>
+                <ul>
+                  <li class="fruit">fresh figs</li>
+                  <li class="fruit">peach</li>
+                  <li class="fruit">apricot</li>
+                  <li class="fruit">grapes</li>
+                </ul>
+              </div>
+              <div id="vegetables">
+                <p>List of vegetables</p>
+                <ul>
+                  <li class="vegetable">green lettuce</li>
+                  <li class="vegetable">orange</li>
+                  <li class="vegetable">broccoli</li>
+                  <li class="vegetable">spinach</li>
+                  
+                </ul>
+              </div>
+            </div>
+  			  </div>
+			  </div>
+
+		  </section>
+		  <section class="sidebar">
+		    <!-- sidebar content goes in here -->
+		  </section>
+		  
+		  <footer>
+		    <!-- footer content goes in here -->
+		   <p class="copyright">Copyright &copy; 2016 </p>
+		   </footer>
+		  <script type="text/javascript"></script>
+	</body>
+
+
+</html>

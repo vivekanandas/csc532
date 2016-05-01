@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			.sidebar{
+				width: 10%;
+				display: inline-block;
+			}
+			#main{
+				width: 80%;
+				display: inline-block;
+				min-height: 600px;
+			}
+			nav{
+				width: 80%;
+				margin: 0 10%;
+				height:50px;
+				background-color: #EA4335;	
+			}
+			footer{
+				width: 100%;
+				height:50px;
+				background-color: #5F5F5F;
+			}
+			h1,.copyright{
+				 display: flex;
+				 align-items: center;
+				 justify-content: center;
+				 color: #FFFFFF;
+			}
+			#form1,span{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			header{
+				width: 100%;
+				height:50px;
+				background-color: #4285F4;
+				color:#FFFFFF;
+			}
+			#container1{
+				width: 100%;
+				min-height: 500px;
+				border: 1px solid rgba(0, 0, 0, 0);
+			}
+			
+			#container2{
+				width: 60%;
+				min-height: 300px;
+				margin: 50px 20%;
+				border: 3px red solid;
+				box-shadow: 2px 2px 2px 2px #888888;
+				border-radius: 15px;
+
+			}
+			
+			#flex-container{
+				width: 90%;
+				 margin: 0 5%;
+			}
+			#text1{
+				 display: block;
+				 width: 100%;
+				 
+			}
+			.heading, label{
+				color:#000000;
+			}
+			.heading{
+				display: inline-block;
+				padding-left: 10px;
+			}
+			span{
+				color:red;
+			}
+			.number{
+				font-size: 20px;
+				font-weight: 500;
+				align-items: center;
+				justify-content: left;
+				padding-left: 10px;
+			}
+			ul li{
+				list-style: none;
+			}
+		</style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
+		<script>
+			$(document).ready(function() {
+				var numbers = $.makeArray(document.getElementsByClassName("number"));
+				var num = '';
+				$.each(numbers,function( index, value ){
+					num += value.innerHTML;
+				});
+				
+				$('#converted-string').text(num);
+				$('#sub-string').text(num.substring(0, 3));
+				
+			});
+
+		</script>
+	</head>
+	<body>
+
+		  <header>
+		    <h1>Lab 25</h1>
+		  </header>
+		  <nav>
+		  	
+		  </nav>
+		  <section class="sidebar">
+		    <!-- sidebar content goes in here -->
+		  </section>
+
+		  <section id="main">
+			  <div id="container1">
+				<div id="container2">
+					<h1 class="heading">This is the original array:</h1>
+					<ul>
+						<li class="number">98</li>
+						<li class="number">72</li>
+						<li class="number">4</li>
+						<li class="number">73</li>
+						<li class="number">15</li>
+						<li class="number">8</li>
+					</ul>
+					<h1 class="heading" id="heading2">This is the converted string</h1>
+					<ul>
+						<li id="converted-string"></li>
+					</ul>
+					<h1  class="heading" id="heading3">The substring (from 0 to 3) is:</h1>
+					<ul>
+						<li id="sub-string"></li>
+					</ul>
+
+					
+			  	</div>
+			  </div>
+
+		  </section>
+		  <section class="sidebar">
+		    <!-- sidebar content goes in here -->
+		  </section>
+		  
+		  <footer>
+		    <!-- footer content goes in here -->
+		   <p class="copyright">Copyright &copy; 2016 </p>
+		   </footer>
+		  <script type="text/javascript"></script>
+	</body>
+
+
+</html>
