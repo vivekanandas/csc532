@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <style>
+			.sidebar{
+				width: 10%;
+				display: inline-block;
+			}
+			#main{
+				width: 80%;
+				display: inline-block;
+				min-height: 600px;
+			}
+			nav{
+				width: 80%;
+				margin: 0 10%;
+				height:50px;
+				background-color: #EA4335;	
+			}
+			footer{
+				width: 100%;
+				height:50px;
+				background-color: #5F5F5F;
+			}
+			h1,.copyright{
+				 display: flex;
+				 align-items: center;
+				 justify-content: center;
+				 color: #FFFFFF;
+			}
+			#form1,span{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			header{
+				width: 100%;
+				height:50px;
+				background-color: #4285F4;
+				color:#FFFFFF;
+			}
+			#container1{
+				width: 100%;
+				min-height: 500px;
+				border: 1px solid rgba(0, 0, 0, 0);
+			}
+			
+			#container2{
+				width: 60%;
+				min-height: 300px;
+				margin: 50px 20%;
+			}
+			
+			#flex-container{
+				width: 90%;
+				 margin: 0 5%;
+			}
+			#text1{
+				 display: block;
+				 width: 100%;
+				 
+			}
+			.heading, label{
+				color:#000000;
+			}
+			.heading{
+				display: inline-block;
+				padding-left: 10px;
+			}
+			span{
+				color:red;
+			}
+			.number{
+				font-size: 20px;
+				font-weight: 500;
+				align-items: center;
+				justify-content: left;
+				padding-left: 10px;
+			}
+			ul li{
+				list-style: none;
+			}
+      #vegetables ul li ,#fruits ul li {
+        list-style: circle;
+        color:#000;
+      }
+      .ui-widget-content{
+        border:none;
+      }
+      .ui-widget-header {
+        background: #F8B74C;
+        border: 1px solid #c49e60;
+
+      }
+	  #dialog{
+		border: 1px solid #c49e60;	  	
+	  }
+	</style>
+		
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<script>
+			$(document).ready(function() {
+  				$( "#dialog" ).dialog({
+					autoOpen: false,
+					width: 400,
+				});
+  				$( "#dialog" ).dialog( "open" );
+				$( "#accordion" ).accordion();
+
+      		});
+
+		</script>
+	</head>
+	<body>
+
+		  <header>
+		    <h1>Lab 27</h1>
+		  </header>
+		  <nav>
+		  	
+		  </nav>
+		  <section class="sidebar">
+		    <!-- sidebar content goes in here -->
+		  </section>
+
+		  <section id="main">
+			  <div id="container1">
+  				<div id="container2">
+  					<p>One of the dialog's greatest assets is modality. This feature creates an overlay that covers the underlying page below the dialog while it is open. The overlay is removed as soon as the dialog is closed. None of the underlying page content can be interacted with in any way while the dialog is open.</p>  
+  			  	</div>
+  			  	<!-- ui-dialog -->
+				<div id="dialog" title="Dialog Title">
+					<div id="accordion">
+						<h3>Dialog</h3>
+						<div>A dialog has a lot of default behaviour built-in, but few methods are needed to control it programmatically, making this an easy-to-use widget that is also highly configuable and powerful.</div>
+						<h3>Accordion</h3>
+						<div>We can easily place other UI widget into the dialog, such as the accordion widget</div>
+					</div>
+				</div>
+			  </div>
+				
+		  </section>
+		  <section class="sidebar">
+		    <!-- sidebar content goes in here -->
+		  </section>
+		  
+		  <footer>
+		    <!-- footer content goes in here -->
+		   <p class="copyright">Copyright &copy; 2016 </p>
+		   </footer>
+		  <script type="text/javascript"></script>
+	</body>
+
+
+</html>
