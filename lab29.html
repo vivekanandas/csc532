@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<link rel='stylesheet' href='http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css'>
+		<script src='http://code.jquery.com/jquery-1.11.1.min.js'></script>
+		<script>
+			$(document).bind('mobileinit',function(){
+		        $.mobile.changePage.defaults.changeHash = false;
+		        $.mobile.hashListeningEnabled = false;
+		        $.mobile.pushStateEnabled = false;
+	    	});
+
+		</script>
+		<script src='http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js'></script>
+    <style>
+			
+	</style>
+
+	</head>
+	<body>
+		<div data-role="page" id="home">
+			<div data-role="header" data-theme="b">
+				<h1>Header of Main Page</h1>
+			</div>
+			<div data-role="content">
+				<video class="localvideo" controls width="560" height="315">
+				<source id="mp4_src"
+				src="img/v1.mp4"
+				type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+				</source>
+				</video>
+				<br>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/N_ZgyNoHtjw" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<div data-role="footer" data-theme="b">
+				<h4>Footer of Main Page</h4>
+			</div>
+		</div>
+	</body>
+
+
+</html>
