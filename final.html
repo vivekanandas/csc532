@@ -98,6 +98,9 @@
 			#container3 h1{
 				color: #EA4335;
 			}
+			#btn-date{
+				margin:0;
+			}
 		</style>
 		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
    		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script> 
@@ -113,6 +116,9 @@
 					($("#dialog").dialog("isOpen") == false) ? $("#dialog").dialog("open") : $("#dialog").dialog("close") ;
 					$( "#accordion" ).accordion({collapsible: true});
 					$( "#tabs" ).tabs();
+					$('#tabs a').mouseover(function(event) {
+						$(this).click();
+					});
 					$('#btn-disable-2').click(function(event) {
 						$( "#tabs" ).tabs({ disabled: [1] });
 					});
@@ -120,7 +126,11 @@
 						$( "#tabs" ).tabs("enable", 1);
 					});
 					
-					$( "#datepicker" ).datepicker();
+					$('#btn-date').click(function(event) {
+						$( "#datepicker" ).datepicker();
+						$( "#datepicker" ).focus();
+					});
+					
 					
 				});
 				
@@ -177,10 +187,12 @@
 		              <button id="btn-disable-2">Disable Tab 2</button>
 		            </div>
 					<h3>Header 3</h3>
-					<form onSubmit= "return false;">
+					<form onsubmit="return false;">
 						<label for="date">Enter a date</label>
 						<br>
 						<input type="text" id="datepicker">
+						<br>
+						<button id="btn-date">...</button>
 					</form>
 				</div>
 			</div>
